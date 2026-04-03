@@ -10,7 +10,7 @@ COPY go.mod go.sum ./
 
 # 2. A MÁGICA AQUI: Em vez de tentar copiar do Easypanel, o Docker baixa o submódulo na hora.
 # ATENÇÃO: Substitua a URL abaixo pelo link real do repositório da whatsmeow-lib que você está usando!
-RUN git clone git@github.com:EvolutionAPI/whatsmeow.git ./whatsmeow-lib
+RUN git clone https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 
 # 3. Fazer o download das dependências aproveitando a pasta que o git acabou de baixar
 RUN go mod download
